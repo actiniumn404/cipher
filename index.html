@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Atomic Number Cipher Generator</title>
 	<link href="/style.css" rel="stylesheet" type="text/css" />
+	<base href="/">
 </head>
 	<body>
 		<header>
@@ -27,6 +28,12 @@
 		<script defer>
 			const frame = document.querySelector("iframe").contentWindow
 			window.onload = function(){
+				if (location.origin === "https://actiniumn404.github.io"){
+					document.querySelector("base").setAttribute("href", location.origin + "/cipher/")
+				}else{
+					document.querySelector("base").setAttribute("href", location.origin+"/")
+				}
+
 				frame.document.querySelectorAll("a").forEach(e=>e.setAttribute("href", "javascript:void(0)"))
 			}
 		</script>
