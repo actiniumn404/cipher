@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Atomic Number Cipher Generator</title>
+	<link href="/style.css" rel="stylesheet" type="text/css" />
+</head>
+	<body>
+		<header>
+			<div id="title__image">
+				<img src="/header.png">
+				<h1>Number Cipher <sup>TM</sup></h1>
+			</div>
+			<h2>The best way to send secret messages to your big brain friends</h2>
+		</header>
+		<form action="/result.html">
+			<input name="q" style="height:70px" autocomplete="off" placeholder="Query you want to encode. (e.g. Atomic Number Cipher)" required pattern="[a-zA-Z\s]+" title="Only letters please">
+			<div>
+				<input name="alphindex" type="checkbox" style="height:28px;width:28px;">
+				<label for="alphindex" style="margin-left: 10px;">Turn on alphabet mode</label>
+			</div>
+			<input type="submit" class="button">
+		</form>
+		<br><br><br>
+		<iframe src="/decode.html"></iframe>
+		<script defer>
+			const frame = document.querySelector("iframe").contentWindow
+			window.onload = function(){
+				frame.document.querySelectorAll("a").forEach(e=>e.setAttribute("href", "javascript:void(0)"))
+			}
+		</script>
+	</body>
+</html>

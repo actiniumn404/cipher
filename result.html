@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Atomic Number Cipher Generator</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+	<body>
+		<h1 style="font-size:40px;">
+			Results for: 
+			<span id="resulttext">LOREM IPSUM</span>
+			<a href="/">
+				<button class="button" style="padding:10px;">
+					&lt; Back
+				</button>
+			</a>
+		</h1>
+		<section>
+			<h1 class="headertext">
+				Text (for chats)
+				<button class="button" style="padding:10px 10px;" onclick="copy(encoded.join(' '))">
+					Copy
+				</button>
+			</h1>
+			<span id="textfile"></span>
+		</section>
+		<section>
+			<h1 class="headertext">
+				Image 
+				<a href="#" id="download" download="Atomic_Number_Cipher_Results">
+					<button class="button" style="padding:10px 10px;">
+						Download
+					</button>
+				</a>
+				<button class="button" style="padding:10px 10px;" onclick="copy(canvas.toDataURL())">
+					Copy Image Link (Data:image)
+				</button>
+				<!--<button class="button" style="padding:10px 10px;" onclick="copyimage()">
+					Upload to <a href="https://imgur.com" target="_blank">imgur</a> and then Copy Image Link
+				</button>-->
+			</h1>
+			<canvas id="canvas" width="100vw"></canvas>
+		</section>
+		<script src="data.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
