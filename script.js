@@ -85,7 +85,7 @@ function cipher(text){
 				if (!urljson.get("alphindex")){
 					result.push(letters[pointer])
 				}else{
-					result.push("a"+("ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(letters[pointer]))
+					result.push("a"+(("ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(letters[pointer])+1))
 				}
 			}
 			pointer += 1
@@ -120,3 +120,4 @@ function copy(txt) {
 		alert("Something went wrong with copying the image link")
 	}
 }
+
